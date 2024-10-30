@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import one from '../assets/one.jpeg'
+import one from '../assets/one.jpg'
 import Skill from './Skill';
 // import { TypeAnimation } from 'react-type-animation';
 const Introduc = () => {
