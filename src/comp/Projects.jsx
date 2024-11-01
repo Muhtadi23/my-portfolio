@@ -3,22 +3,36 @@ import travel from '../assets/travel.png'
 import space from '../assets/Space.png'
 import dine from '../assets/DineSync.png'
 import pre from '../assets/pre.png'
+import { motion } from "framer-motion"
 const Projects = () => {
     return (
         <div id="project" className="p-4">
-            {/* <h2 className="text-[#eb4034] text-3xl font-bold my-4">Portfolio</h2> */}
             <section className="overflow-hidden sm:grid sm:grid-cols-2 text-white">
+
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                        <h2 data-aos="fade-up" data-aos-delay="300" className="text-2xl font-bold md:text-3xl">
+                        <motion.h2
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: true }}
+                            className="text-2xl font-bold md:text-3xl">
                             Premium Rush
-                        </h2>
+                        </motion.h2>
 
-                        <p data-aos="fade-up" data-aos-delay="500" className="hidden md:mt-4 md:block">
+                        <motion.p
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="hidden md:mt-4 md:block">
                             Premium is a blog and E-commerce web application.
-                        </p>
+                        </motion.p>
 
-                        <div data-aos="fade-up" data-aos-delay="700" className="mt-4 md:mt-8">
+                        <motion.div
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            transition={{ duration: 2, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="mt-4 md:mt-8">
                             <a href="https://github.com/Muhtadi23/my-bike">
                                 <button className="btn btn-ghost font-semibold text-[#eb4034]"><FaGithub /> Git</button>
                             </a>
@@ -30,11 +44,15 @@ const Projects = () => {
                                     <FaExternalLinkAlt /> Live Site
                                 </button>
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
-                <img data-aos="zoom-in"
+                <motion.img
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                     alt=""
                     src={pre}
                     className="h-56 w-full object-cover sm:h-full"
@@ -46,16 +64,28 @@ const Projects = () => {
             <section className="overflow-hidden sm:grid sm:grid-cols-2 text-white">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                        <h2 data-aos="fade-up" data-aos-delay="300" className="text-2xl font-bold md:text-3xl">
+                        <motion.h2
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="text-2xl font-bold md:text-3xl">
                             DineSync
-                        </h2>
+                        </motion.h2>
 
-                        <p data-aos="fade-up" data-aos-delay="500" className="hidden md:mt-4 md:block">
+                        <motion.p
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="hidden md:mt-4 md:block">
                             DineSync is a food ordering website that allows user to order food.
                             This is a basic food ordering website built using React.js and MongoDB.
-                        </p>
+                        </motion.p>
 
-                        <div data-aos="fade-up" data-aos-delay="700" className="mt-4 md:mt-8">
+                        <motion.div
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            transition={{ duration: 2, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="mt-4 md:mt-8">
                             <a href="https://github.com/Muhtadi23/DineSync">
                                 <button className="btn btn-ghost font-semibold text-[#eb4034]"><FaGithub /> Git</button>
                             </a>
@@ -67,62 +97,94 @@ const Projects = () => {
                                     <FaExternalLinkAlt /> Live Site
                                 </button>
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
-                <img data-aos="zoom-in"
+                <motion.img
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                     alt=""
                     src={dine}
                     className="h-56 w-full object-cover sm:h-full"
                 />
-            </section>
-            
+            </section >
+
             <div className="divider divider-neutral"></div>
 
             <section className="overflow-hidden sm:grid sm:grid-cols-2 text-white">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                        <h2 data-aos="fade-up" data-aos-delay="300" className="text-2xl font-bold md:text-3xl">
+                        <motion.h2
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="text-2xl font-bold md:text-3xl">
                             Travel Js
-                        </h2>
+                        </motion.h2>
 
-                        <p data-aos="fade-up" data-aos-delay="500" className="hidden md:mt-4 md:block">
+                        <motion.p
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="hidden md:mt-4 md:block">
                             This a Travel landing build for practicing HTML, CSS and JaveScript only.
-                        </p>
+                        </motion.p>
 
-                        <div data-aos="fade-up" data-aos-delay="700" className="mt-4 md:mt-8">
+                        <motion.div
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            transition={{ duration: 2, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="mt-4 md:mt-8">
                             <button disabled className="btn btn-ghost font-semibold text-[#eb4034]"><FaGithub /> Git</button>
                             <a href="https://trave-js.netlify.app" target="_blank" rel="noopener noreferrer">
                                 <button className="btn btn-ghost font-semibold text-[#eb4034]">
                                     <FaExternalLinkAlt /> Live Site
                                 </button>
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
-                <img data-aos="zoom-in"
+                <motion.img
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                     alt=""
                     src={travel}
                     className="h-56 w-full object-cover sm:h-full"
                 />
-            </section>
+            </section >
 
             <div className="divider divider-neutral"></div>
 
             <section className="overflow-hidden sm:grid sm:grid-cols-2 text-white">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                        <h2 data-aos="fade-up" data-aos-delay="300" className="text-2xl font-bold md:text-3xl">
+                        <motion.h2
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="text-2xl font-bold md:text-3xl">
                             Space Y
-                        </h2>
+                        </motion.h2>
 
-                        <p data-aos="fade-up" data-aos-delay="500" className="hidden md:mt-4 md:block">
+                        <motion.p
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="hidden md:mt-4 md:block">
                             Space Y is Landing Page built just using React.js.
-                        </p>
+                        </motion.p>
 
-                        <div data-aos="fade-up" data-aos-delay="700" className="mt-4 md:mt-8">
+                        <motion.div
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 60 }}
+                            transition={{ duration: 2, ease: "easeInOut" }}
+                            viewport={{ once: true }} className="mt-4 md:mt-8">
                             <a href="https://github.com/Muhtadi23/space-fix">
                                 <button className="btn btn-ghost font-semibold text-[#eb4034]"><FaGithub /> Git</button>
                             </a>
@@ -133,18 +195,22 @@ const Projects = () => {
                                     <FaExternalLinkAlt /> Live Site
                                 </button>
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
-                <img data-aos="zoom-in"
+                <motion.img
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                     alt=""
                     src={space}
                     className="h-56 w-full object-cover sm:h-full"
                 />
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 };
 

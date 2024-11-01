@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 const Timeline = () => {
     return (
         <div>
@@ -18,11 +19,20 @@ const Timeline = () => {
                         </div>
                         <div className="timeline-start mb-10 md:text-end">
                             <time className="text-lg italic">2024</time>
-                            <div data-aos="fade-up" data-aos-delay="300" className="text-lg ">Bachelor in Science</div>
-                            <p data-aos="fade-up" data-aos-delay="300">Computer Science Engineering</p>
-                            <p data-aos="fade-up" data-aos-delay="300">Bangladesh University of Business and Technology</p>
-                            <p data-aos="fade-up" data-aos-delay="300">CGPA 2.91 (out of 4.00)</p>
-                          
+                            <motion.div
+                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                transition={{ duration: 1, ease: "easeInOut" }}
+                                viewport={{ once: true }}
+                            >
+                                <div
+                                    className="text-lg ">Bachelor in Science</div>
+                                <p data-aos="fade-up" data-aos-delay="300">Computer Science Engineering</p>
+                                <p data-aos="fade-up" data-aos-delay="300">Bangladesh University of Business and Technology</p>
+                                <p data-aos="fade-up" data-aos-delay="300">CGPA 2.91 (out of 4.00)</p>
+
+                            </motion.div>
+
                         </div>
                         <hr />
                     </li>
@@ -42,11 +52,18 @@ const Timeline = () => {
                         </div>
                         <div className="timeline-end mb-8">
                             <time className="italic text-lg">2018</time>
-                            <div data-aos="fade-up" data-aos-delay="500" className="text-lg ">Higher Secondary Certificate</div>
-                            <p data-aos="fade-up" data-aos-delay="500">Banophool Adibashi Green Heart College </p>
-                            <p data-aos="fade-up" data-aos-delay="500">GPA 4.33 (out of 5.00) </p>
-                            
-                           
+                            <motion.div
+                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                transition={{ duration: 1.5, ease: "easeInOut" }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="text-lg ">Higher Secondary Certificate</div>
+                                <p data-aos="fade-up" data-aos-delay="500">Banophool Adibashi Green Heart College </p>
+                                <p data-aos="fade-up" data-aos-delay="500">GPA 4.33 (out of 5.00) </p>
+                            </motion.div>
+
+
                         </div>
                         <hr />
                     </li>
@@ -66,9 +83,17 @@ const Timeline = () => {
                         </div>
                         <div className="timeline-start mb-10 md:text-end">
                             <time className="italic text-lg">2016</time>
-                            <div data-aos="fade-up" data-aos-delay="700" className="text-lg ">Secondary School Certificate</div>
-                            <p data-aos="fade-up" data-aos-delay="700">Mirpur Bangla School and College </p>
-                            <p data-aos="fade-up" data-aos-delay="700">GPA 4.33 (out of 5.00)</p>
+                            <motion.div
+                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                transition={{ duration: 2, ease: "easeInOut" }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="text-lg ">Secondary School Certificate</div>
+                                <p data-aos="fade-up" data-aos-delay="700">Mirpur Bangla School and College </p>
+                                <p data-aos="fade-up" data-aos-delay="700">GPA 4.33 (out of 5.00)</p>
+                            </motion.div>
+
                         </div>
                     </li>
                 </ul>

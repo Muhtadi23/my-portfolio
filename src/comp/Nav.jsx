@@ -1,5 +1,21 @@
 const Nav = () => {
 
+    const links = [
+        {
+            title: "Projects",
+            path: "#project"
+        },
+        {
+            title: "About",
+            path: "#about"
+        },
+        {
+            title: "Timeline",
+            path: "#timeline"
+        }
+    ]
+
+
     return (
 
         <div className="navbar bg-black text-white">
@@ -22,20 +38,33 @@ const Nav = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a href="#project">Projects</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#timeline">Timeline</a></li>
+                        {
+                            links.map((link) =>
+                                <li key={link.path}>
+                                    <a href={link.path}>{link.title}</a>
+
+                                </li>
+                            )
+                        }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl">Miran Muhtadi</a>
+                <h2 className="text-2xl p-2 font-medium">Miran Muhtadi</h2>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
+                    {
+                        links.map((link) =>
+                            <li key={link.path} className="group">
+                                <a href={link.path} className="relative overflow-hidden">
+                                    {link.title}
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 ease-out group-hover:w-full"></span>
+                                </a>
+                            </li>
+                        )
+                    }
                 </ul>
             </div>
+
         </div>
     );
 };
