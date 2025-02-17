@@ -43,7 +43,7 @@ const Projects = () => {
                 <div key={index}>
                     <section className="overflow-hidden sm:grid sm:grid-cols-2 text-white">
                         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-                            <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+                            <div className="mx-auto max-w-xl text-center sm:text-left">
                                 <motion.h2
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 50 }}
@@ -62,36 +62,52 @@ const Projects = () => {
                                     {project.description}
                                 </motion.p>
 
+                                {/* Buttons with Perfect Center Alignment */}
                                 <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    initial={{ opacity: 0, y: 60 }}
-                                    transition={{ duration: 2, ease: "easeInOut" }}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.5 }}
                                     viewport={{ once: true }}
-                                    className="mt-4 md:mt-8">
-
-                                    {/* GitHub Button (Disabled if No GitHub Link) */}
+                                    className="mt-4 md:mt-8 flex items-center justify-center sm:justify-start gap-4"
+                                >
+                                    {/* GitHub Button */}
                                     {project.github ? (
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                            <button className="btn btn-ghost font-semibold text-[#eb4034]">
+                                        <motion.a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="flex items-center justify-center"
+                                        >
+                                            <button className="btn btn-ghost font-semibold text-[#eb4034] flex items-center justify-center gap-2 px-4 py-2">
                                                 <FaGithub /> Git
                                             </button>
-                                        </a>
+                                        </motion.a>
                                     ) : (
-                                        <button disabled className="btn btn-ghost font-semibold text-[#eb4034] opacity-50">
+                                        <button disabled className="btn btn-ghost font-semibold text-[#eb4034] opacity-50 flex items-center justify-center gap-2 px-4 py-2">
                                             <FaGithub /> Git
                                         </button>
                                     )}
 
                                     {/* Live Site Button */}
-                                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                        <button className="btn btn-ghost font-semibold text-[#eb4034]">
+                                    <motion.a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="flex items-center justify-center"
+                                    >
+                                        <button className="btn btn-ghost font-semibold text-[#eb4034] flex items-center justify-center gap-2 px-4 py-2">
                                             <FaExternalLinkAlt /> Live Site
                                         </button>
-                                    </a>
+                                    </motion.a>
                                 </motion.div>
                             </div>
                         </div>
 
+                        {/* Image Animation */}
                         <motion.img
                             initial={{ scale: 0.8, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
@@ -102,6 +118,7 @@ const Projects = () => {
                             className="h-56 w-full object-cover sm:h-full"
                         />
                     </section>
+
                     {index !== projects.length - 1 && <div className="divider divider-neutral"></div>}
                 </div>
             ))}
