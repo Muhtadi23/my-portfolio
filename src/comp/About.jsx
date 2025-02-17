@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <div id='about' className="hero mb-14 text-white h-screen">
+        <div id='about' className="hero mb-14 text-white">
             <motion.div
                 className="hero-content flex-col lg:flex-row"
                 initial="hidden"

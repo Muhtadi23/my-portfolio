@@ -30,7 +30,7 @@ const timelineData = [
 const Timeline = () => {
     return (
         <div>
-            <div id="timeline" className="my-8 text-white p-4 h-screen">
+            <div id="timeline" className="my-8 text-white p-4">
                 <motion.ul
                     className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
                     initial="hidden"

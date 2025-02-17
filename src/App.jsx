@@ -1,3 +1,4 @@
+import { domAnimation, LazyMotion } from "framer-motion"
 import About from "./comp/About"
 import Footer from "./comp/Footer"
 import Introduc from "./comp/Introduc"
@@ -9,14 +10,16 @@ import Timeline from "./comp/Timeline"
 
 function App() {
   return (
-    <div className="max-w-[1440px] mx-auto">
-      <Nav></Nav>
-      <Introduc></Introduc>
-      <About></About>
-      <Timeline></Timeline>
-      <Projects></Projects>
-      <Footer></Footer>
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div className="max-w-[1440px] mx-auto">
+        <Nav />
+        <Introduc />
+        <About />
+        <Timeline />
+        <Projects />
+        <Footer />
+      </div>
+    </LazyMotion>
   )
 }
 
