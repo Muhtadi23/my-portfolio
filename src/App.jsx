@@ -12,10 +12,10 @@ function App() {
     <div className="max-w-[1440px] mx-auto">
       <Nav></Nav>
       <Introduc></Introduc>
-      <About></About>
-      <Timeline></Timeline>
-      <Projects></Projects>
-      <Footer></Footer>
+      {/* <About></About> */}
+      {/* <Timeline></Timeline> */}
+      {/* <Projects></Projects> */}
+      {/* <Footer></Footer> */}
     </div>
   )
 }
