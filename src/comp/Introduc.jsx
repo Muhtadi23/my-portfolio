@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Introduc = () => {
     return (
         <div>
-            <div className="hero text-white">
+            <div className="hero text-white h-screen">
                 <motion.div
                     className="hero-content flex-col-reverse lg:flex-row-reverse justify-between"
                     initial="hidden"
