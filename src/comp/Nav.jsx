@@ -48,7 +48,7 @@ const Nav = () => {
                         }
                     </ul>
                 </div>
-                <h2 className="lg:text-2xl sm:text-xl p-2 font-medium">Miran Muhtadi</h2>
+                <h2 className="lg:text-3xl sm:text-xl p-2 font-semibold">Miran Muhtadi</h2>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

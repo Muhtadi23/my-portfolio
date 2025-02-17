@@ -47,7 +47,7 @@ const Projects = () => {
                                 <motion.h2
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 50 }}
-                                    transition={{ duration: 1, ease: "easeInOut" }}
+                                    transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
                                     viewport={{ once: true }}
                                     className="text-2xl font-bold md:text-3xl">
                                     {project.title}
@@ -56,17 +56,17 @@ const Projects = () => {
                                 <motion.p
                                     whileInView={{ opacity: 1, y: 0 }}
                                     initial={{ opacity: 0, y: 50 }}
-                                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                                    transition={{ duration: 1.2, ease: "easeOut", delay: index * 0.3 }}
                                     viewport={{ once: true }}
                                     className="hidden md:mt-4 md:block">
                                     {project.description}
                                 </motion.p>
 
-                                {/* Buttons with Perfect Center Alignment */}
+                                {/* Buttons with Smooth Entrance & Floating Effect */}
                                 <motion.div
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.5 }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    transition={{ duration: 1.4, ease: "easeOut", delay: index * 0.4 }}
                                     viewport={{ once: true }}
                                     className="mt-4 md:mt-8 flex items-center justify-center sm:justify-start gap-4"
                                 >
@@ -76,7 +76,7 @@ const Projects = () => {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.05 }}
+                                            whileHover={{ scale: 1.08, y: -2 }}
                                             whileTap={{ scale: 0.95 }}
                                             className="flex items-center justify-center"
                                         >
@@ -95,7 +95,7 @@ const Projects = () => {
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.05 }}
+                                        whileHover={{ scale: 1.08, y: -2 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="flex items-center justify-center"
                                     >
@@ -107,15 +107,15 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        {/* Image Animation */}
+                        {/* Image Animation with Smooth Scale Effect */}
                         <motion.img
-                            initial={{ scale: 0.8, opacity: 0 }}
+                            initial={{ scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 2, ease: "easeInOut" }}
+                            transition={{ duration: 1.8, ease: "easeOut", delay: index * 0.2 }}
                             viewport={{ once: true }}
                             alt={project.title}
                             src={project.img}
-                            className="h-56 w-full object-cover sm:h-full"
+                            className="h-56 w-full object-cover sm:h-full rounded-lg shadow-lg"
                         />
                     </section>
 
