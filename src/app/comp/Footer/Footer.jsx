@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaYoutube, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -6,8 +6,6 @@ const Footer = () => {
             <footer className="footer footer-center p-10 bg-black text-base-content rounded">
                 <nav>
                     <div className="grid grid-flow-col gap-4 text-3xl text-white">
-                        <a href="https://www.facebook.com/miran.muhtadi/"><FaFacebookF /></a>
-                        <a href="https://twitter.com/miranmuhtadi121"><FaTwitter /></a>
                         <a href="https://youtube.com/@miranmuhtadi?si=JtMtMP0OzcWd6GiR"><FaYoutube /></a>
                         <a href="https://github.com/Muhtadi23"><FaGithub /></a>
                         <a href="https://www.linkedin.com/in/miranmuhtadi23/"><FaLinkedinIn /></a>
