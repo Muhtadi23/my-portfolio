@@ -1,96 +1,95 @@
-'use client'
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React from 'react';
-import { FaHome, FaProjectDiagram, FaGraduationCap, FaTools, FaCode } from 'react-icons/fa';
-import { TbMailFilled } from "react-icons/tb";
-
+"use client"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { FaHome, FaProjectDiagram, FaGraduationCap, FaCode } from "react-icons/fa"
+import { TbMailFilled } from "react-icons/tb"
 
 const Navbar = () => {
-    const pathname = usePathname(); // Get the current route
+    const pathname = usePathname() // Get the current route
 
     const links = [
         { title: "Home", path: "/", icon: <FaHome /> },
         { title: "Skills", path: "/skills", icon: <FaCode /> },
         { title: "Projects", path: "/projects", icon: <FaProjectDiagram /> },
         { title: "Education", path: "/education", icon: <FaGraduationCap /> },
-        { title: "Contact", path: "/contact", icon: <TbMailFilled /> }
-    ];
+        { title: "Contact", path: "/contact", icon: <TbMailFilled /> },
+    ]
+
+    const getLinkGradient = (index) => {
+        const gradients = [
+            "from-fuchsia-500 to-purple-600", // Home
+            "from-cyan-500 to-blue-600", // Skills
+            "from-green-400 to-teal-500", // Projects
+            "from-yellow-400 to-orange-500", // Education
+            "from-pink-500 to-rose-600", // Contact
+        ]
+        return gradients[index % gradients.length]
+    }
+
+    // Function to get solid color based on index
+    const getLinkColor = (index) => {
+        const colors = [
+            "text-fuchsia-500", // Home
+            "text-cyan-500", // Skills
+            "text-green-400", // Projects
+            "text-yellow-400", // Education
+            "text-pink-500", // Contact
+        ]
+        return colors[index % colors.length]
+    }
 
     return (
-        <div className="navbar bg-black text-white">
-            {/* Navbar End */}
-            <div className="mx-auto">
+        <div className="navbar absolute z-50">
+            {/* Retro Grid Background */}
+            <div className="absolute inset-0 z-0 opacity-20">
+                <div className="w-full h-full bg-[linear-gradient(to_right,#2c1e4a_1px,transparent_1px),linear-gradient(to_bottom,#2c1e4a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+            </div>
+
+            <div className="mx-auto relative z-10">
                 <ul className="menu menu-horizontal px-1 gap-4">
-                    {links.map((link) => (
+                    {links.map((link, index) => (
                         <li key={link.path} className="group">
                             <Link
                                 href={link.path}
-                                className={`relative flex items-center gap-2 px-2 py-2 rounded-lg duration-300 ease-in-out ${pathname === link.path ? "text-white font-semibold" : "text-white hover:text-white"
+                                className={`relative flex items-center gap-2 px-2 py-2 rounded-lg duration-300 ease-in-out ${pathname === link.path ? "text-white font-semibold" : "text-white/80 hover:text-white"
                                     }`}
                             >
-                                {/* Icon */}
-                                <span className='text-xl transition-transform duration-300 group-hover:scale-125'>
+                                {/* Icon with solid color instead of gradient */}
+                                <span
+                                    className={`text-xl transition-transform duration-300 group-hover:scale-125 ${pathname === link.path ? getLinkColor(index) : "text-white/80 group-hover:text-white"
+                                        }`}
+                                >
                                     {link.icon}
                                 </span>
 
-                                {/* Text (Hidden on Small Screens) */}
-                                <span className='text-lg hidden lg:block transition-opacity duration-300 ease-in-out group-hover:opacity-100'>
+                                {/* Text with gradient */}
+                                <span
+                                    className={`text-lg hidden lg:block transition-opacity duration-300 ease-in-out group-hover:opacity-100 ${pathname === link.path
+                                        ? `text-transparent bg-clip-text bg-gradient-to-r ${getLinkGradient(index)} `
+                                        : ""
+                                        }`}
+                                >
                                     {link.title}
                                 </span>
 
                                 {/* Underline Animation */}
-                                <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-500 ease-in-out ${pathname === link.path ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+                                <span
+                                    className={`absolute bottom-0 left-0 h-0.5 transition-all duration-500 ease-in-out ${pathname === link.path
+                                        ? `w-full bg-gradient-to-r ${getLinkGradient(index)}`
+                                        : "w-0 group-hover:w-full bg-white"
+                                        }`}
+                                    style={{
+                                        boxShadow: pathname === link.path ? "0 0 5px rgba(255, 255, 255, 0.5)" : "none",
+                                    }}
+                                ></span>
                             </Link>
                         </li>
                     ))}
                 </ul>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar
 
-{/* Navbar Start */ }
-{/* <div className="navbar-start"> */ }
-{/* <div className="dropdown"> */ }
-{/* Mobile Menu Button */ }
-{/* <button tabIndex={0} className="btn btn-ghost lg:hidden dropdown-toggle">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16"
-                            />
-                        </svg>
-                    </button> */}
-{/* Mobile Menu */ }
-{/* <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
-                    >
-                        {links.map((link) => (
-                            <li key={link.path}>
-                                <Link
-                                    href={link.path}
-                                    className={`flex items-center gap-2 px-4 py-2 rounded-md transition duration-300 ${pathname === link.path ? " text-white" : "text-gray-300 "
-                                        }`}
-                                >
-                                    <span>{link.icon}</span>
-                                    <span>{link.title}</span>
-
-                                </Link>
-                            </li>
-                        ))}
-                    </ul> */}
-{/* </div> */ }
-{/* <h2 className="lg:text-3xl sm:text-xl p-2 font-semibold">Miran Muhtadi</h2>
-            </div> */}

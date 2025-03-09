@@ -1,11 +1,11 @@
-import { Niramit } from "next/font/google";
+import { Audiowide } from "next/font/google";
 import "./globals.css";
 import Navbar from "./comp/Navbar/Navbar";
 
-const niramitSans = Niramit({
-  variable: "--font-niramit",
+const audiowideFont = Audiowide({
+  variable: "--font-audiowide",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
+  weight: "400",
 });
 
 export const metadata = {
@@ -18,8 +18,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${niramitSans.variable} min-h-screen`}>
-        <div className="max-w-[1440px] mx-auto">
+      <body className={`${audiowideFont.variable} min-h-screen`}>
+        <div className="">
           <Navbar />
           <main>{children}</main>
           {/* <Footer /> */}
