@@ -85,7 +85,7 @@ const page = () => {
                                         initial={{ opacity: 0, y: 50 }}
                                         transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
                                         viewport={{ once: true }}
-                                        className={`text-2xl font-bold md:text-3xl text-transparent bg-clip-text bg-gradient-to-r ${project.gradient} drop-shadow-[0_0_3px_rgba(255,255,255,0.5)] transition-all`}
+                                        className={`text-2xl font-bold md:text-3xl text-transparent bg-clip-text bg-gradient-to-r ${project.gradient} drop-shadow-[0_0_3px_rgba(255,255,255,0.5)] `}
                                     >
                                         {project.title}
                                     </motion.h2>
@@ -95,7 +95,7 @@ const page = () => {
                                         initial={{ opacity: 0, y: 50 }}
                                         transition={{ duration: 1.2, ease: "easeOut", delay: index * 0.3 }}
                                         viewport={{ once: true }}
-                                        className="mt-4 text-white/80 transition-all"
+                                        className="mt-4 text-white/80 "
                                     >
                                         {project.description}
                                     </motion.p>
@@ -105,7 +105,7 @@ const page = () => {
                                         initial={{ opacity: 0, y: 40 }}
                                         transition={{ duration: 1.4, ease: "easeOut", delay: index * 0.4 }}
                                         viewport={{ once: true }}
-                                        className="mt-6 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 w-full transition-all"
+                                        className="mt-6 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 w-full "
                                     >
                                         {/* GitHub Button */}
                                         {project.github ? (

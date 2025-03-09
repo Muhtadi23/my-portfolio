@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const page = () => {
     return (
-        <div className="min-h-screen flex items-center justify-center px-6 py-12 bg-gradient-to-br from-purple-900 via-indigo-900 to-black relative overflow-hidden mt-2">
+        <div className="min-h-screen flex items-center justify-center px-6 py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-black relative overflow-hidden mt-2">
             {/* Retro Grid Background */}
             <div className="absolute inset-0 z-0 opacity-20">
                 <div className="w-full h-full bg-[linear-gradient(to_right,#2c1e4a_1px,transparent_1px),linear-gradient(to_bottom,#2c1e4a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>

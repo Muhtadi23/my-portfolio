@@ -71,7 +71,7 @@ const Skills = () => {
     ]
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-br from-purple-900 via-indigo-900 to-black relative overflow-hidden">
+        <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-black relative overflow-hidden">
             {/* Retro Grid Background */}
             <div className="absolute inset-0 z-0 opacity-20">
                 <div className="w-full h-full bg-[linear-gradient(to_right,#2c1e4a_1px,transparent_1px),linear-gradient(to_bottom,#2c1e4a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
@@ -105,7 +105,7 @@ const Skills = () => {
                         animate={isHydrated ? "visible" : "hidden"}
                         variants={fadeUpVariants}
                         custom={index}
-                        className="relative group transition-all"
+                        className="relative group  "
                     >
                         {/* Card glow effect */}
                         <div
@@ -128,7 +128,7 @@ const Skills = () => {
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: index * 0.1 + i * 0.05 } }}
                                         whileHover={{ scale: 1.05 }}
-                                        className="flex items-center gap-2 bg-black/50 backdrop-blur-sm border border-white/10 text-white text-sm px-3 py-1 rounded-lg transition-all hover:bg-black/70 hover:border-white/30"
+                                        className="flex items-center gap-2 bg-black/50 backdrop-blur-sm border border-white/10 text-white text-sm px-3 py-1 rounded-lg  hover:bg-black/70 hover:border-white/30"
                                     >
                                         {skill.icon}
                                         {skill.name}

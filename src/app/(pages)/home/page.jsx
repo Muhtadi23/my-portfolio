@@ -60,7 +60,7 @@ const Homepage = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring", stiffness: 100, damping: 12 }}
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-cyan-400 drop-shadow-neon transition-all"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-cyan-400 drop-shadow-neon "
                     >
                         Front-End React <br className="hidden md:block" /> Developer
                     </motion.h1>
@@ -69,7 +69,7 @@ const Homepage = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring", stiffness: 90, damping: 12, delay: 0.2 }}
-                        className="text-lg sm:text-xl md:text-2xl font-semibold mt-4 text-white drop-shadow-neon transition-all"
+                        className="text-lg sm:text-xl md:text-2xl font-semibold mt-4 text-white drop-shadow-neon "
                     >
                         Hello! <span className="text-yellow-300">I am Miran Muhtadi</span>, an
                         enthusiastic Front-End React Developer.

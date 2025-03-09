@@ -94,7 +94,7 @@ const Page = () => {
                                     transition: { duration: 0.6, delay: index * 0.2, ease: "easeOut" },
                                 },
                             }}
-                            className="relative group transition-all"
+                            className="relative group "
                         >
                             {/* Card glow effect */}
                             <div
