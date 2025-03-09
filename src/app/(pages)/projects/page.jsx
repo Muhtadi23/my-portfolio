@@ -7,7 +7,7 @@ import Image from "next/image"
 const projects = [
     {
         title: "Premium Rush",
-        description: "Premium is a blog and E-commerce web application.",
+        description: "Premium Rush is a blog and E-commerce web application.",
         img: "/pre.png",
         github: "https://github.com/Muhtadi23/my-bike",
         live: "https://my-bike-edf11.web.app/",
